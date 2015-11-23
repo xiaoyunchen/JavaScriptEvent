@@ -12,7 +12,9 @@ function doCurrent(event) {
   var target = event.currentTarget;
   
   setTimeout(function() {
-  	currentBox.innerHTML=target.attributes["id"].value;
+  	var msg=event.bubbles?'冒泡：':'捕获：'+target.attributes["id"].value;
+  	currentBox.innerHTML=msg;
+  	console.log(msg);
     target.classList.add(curClass);
     setTimeout(function() {
       target.classList.remove(curClass);
