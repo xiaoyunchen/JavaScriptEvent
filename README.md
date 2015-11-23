@@ -1,2 +1,2 @@
 # JavaScriptEvent
-JavaScript原生事件
+> * 待完善
