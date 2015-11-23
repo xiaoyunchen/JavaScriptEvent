@@ -13,7 +13,7 @@ function doCurrent(event) {
   
   setTimeout(function() {
   	var msg=event.bubbles?'冒泡：':'捕获：'+target.attributes["id"].value;
-  	currentBox.innerHTML=msg;
+  	currentBox.innerHTML=msg; 
   	console.log(msg);
     target.classList.add(curClass);
     setTimeout(function() {
