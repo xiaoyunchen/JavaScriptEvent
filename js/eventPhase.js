@@ -10,9 +10,9 @@ for(var i=0;i<7;i++){
 function doCurrent(event) {
   var ms = event.timeout = (event.timeout + pause) || 0;
   var target = event.currentTarget;
+  var msg=(event.eventPhase==1?'捕获阶段：':'冒泡阶段：')+target.attributes["id"].value;
   
   setTimeout(function() {
-  	var msg=event.bubbles?'冒泡：':'捕获：'+target.attributes["id"].value;
   	currentBox.innerHTML=msg; 
   	console.log(msg);
     target.classList.add(curClass);
